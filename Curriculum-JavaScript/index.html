@@ -30,16 +30,48 @@
             $("#form-datos").validate({
 
                 //vamos a dar las instrucciones RULES => reglas de validacion
-
                 rules:{
                     //parejas de valores nombre de la etiqueta: valor de validacion
                     nombre:"required",
                     apellido: "required",
                     nacionalidad: "required",
                     direccion: "required",
-                    telefono: "number",
-                    email: "required",
-                    cedula: "number"
+                    telefono:{
+                        required:true,
+                        number:true
+                    },
+                    cedula:{
+                        required:true,
+                        minlength: 10,
+                        maxlength:10
+                    },
+                    email:{
+                        required:true,
+                        email:true
+
+                    }
+                },
+
+                //reglas para los mensajes
+                messages:{
+
+                    nombre: "El campo es Obligatorio",
+                    apellido:"El campo es Obligatorio",
+                    nacionalidad: "El campo es Obligatorio",
+                    direccion: "El campo es Obligatorio",
+                    telefono:{
+                        required:"Campo Obligatorio",
+                        number: "Ingrese valores numericos"
+                    },
+                    cedula:{
+                        required:"Obligatorio",
+                        minlength:"mínimo 10 caracteres",
+                        maxlength:"máximo 10 caracteres"
+                    },
+                    email:{
+                        required: 'Ingrese E-mail',
+                        email: 'Formato Incorrecto. Por ejemplo: u@localhost.com' }
+
                 }
 
             });
@@ -51,7 +83,7 @@
     </script>
 
 </head>
-<body bgcolor="#f0ffff">
+<body>
 <div class="container"><br>
 
     <div align="center">
@@ -67,7 +99,7 @@
         <div class="form-group row">
             <label class="col-2 col-form-label">Nombres:</label>
             <div class="col-7">
-            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese sus Nombres" >
+            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese sus Nombres">
             </div>
         </div>
 
@@ -95,7 +127,7 @@
         <div class="form-group row">
             <label class="col-2 col-form-label">Cedula:</label>
             <div class="col-6">
-                <input class="form-control" type="number" id="cedula" >
+                <input class="form-control" type="number" id="cedula" name="cedula" >
             </div>
         </div>
 
