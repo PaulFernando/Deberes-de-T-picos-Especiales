@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hoja de Vida</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <!-- JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+    <!-- <script type="text/javascript" src="js/validaciones.js"></script>  -->
+
+    <!-- JQuery -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+
+    <!-- validaciones <script src="js/jquery.validate.min.js"></script> -->
+    <script src="js/jquery.validate.min.js"></script>
+
+
+
+    <script>
+        $(function () {
+            $("img").hide().fadeIn(3000);
+        })
+
+        $(document).ready(function () {
+
+            $("#form-datos").validate();
+
+        });
+
+
+
+    </script>
+
+</head>
+<body bgcolor="#f0ffff">
+<div class="container"><br>
+
+    <div align="center">
+        <img src="img/curriculum.png">
+    </div><br><br>
+
+    <div class="text-primary">
+        <h2>DATOS PERSONALES:</h2>
+    </div><br>
+
+    <form id="form-datos">
+
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Nombres:</label>
+            <div class="col-7">
+            <input type="text" class="form-control" id="nombre" placeholder="Ingrese sus Nombres" required title="Campo requerido">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Apellidos:</label>
+            <div class="col-7">
+                <input type="text" class="form-control" id="apellido" placeholder="Ingrese sus Apellidos" required title="Campo requerido">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Fecha de Nacimiento:</label>
+            <div class="col-7">
+                <input class="form-control" type="date" placeholder="xxxx-xx-xx" id="date">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Nacionalidad:</label>
+            <div class="col-6">
+                <input type="nacionalidad" class="form-control" id="nacionalidad" placeholder="Nacionalidad" >
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Cedula:</label>
+            <div class="col-6">
+                <input class="form-control" type="number" id="cedula" >
+            </div>
+        </div>
+
+        <div class="form-group row">
+
+            <label class="col-2 col-form-label">Estado Civil</label>
+            <div class="col-6">
+                <select class="form-control" id="estado" >
+                    <option>Solter@</option>
+                    <option>Casad@</option>
+                    <option>Divorciad@</option>
+                    <option>Viud@</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Dirección:</label>
+            <div class="col-6">
+                <input type="direccion" class="form-control" id="exampleInputAdrees" placeholder="Ingrese su Direccion" >
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Teléfono:</label>
+            <div class="col-6">
+                <input class="form-control" type="tel" placeholder="1-(555)-555-5555" id="tel" >
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Email: </label>
+            <div class="col-6">
+            <input type="email" class="form-control" id="email" placeholder="Ingrese su Email" >
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Observaciones:</label>
+            <div class="col-6">
+            <textarea class="form-control" id="area" rows="4" ></textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputFile">Seleccione un archivo</label>
+            <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="comprobar">Guardar</button>
+    </form>
+
+</div>
+
+
+</body>
+</html>
