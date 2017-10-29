@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hoja de Vida</title>
+</head>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+    <!-- JQuery -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+
+    <!-- importamos el doc javascrip -->
+    <script src="js/validacion.js"></script>
+
+
+    <!-- style de los errores -->
+    <style>
+        label.error{
+            color: #c12e2a;
+        }
+        input.error{
+            border: 1.5px dotted red;
+        }
+    </style>
+
+
+<body>
+
+    <div class="container"><br>
+
+        <div align="center">
+            <img src="img/curriculum.png">
+        </div><br><br>
+
+        <div class="text-primary">
+            <h2>DATOS PERSONALES:</h2>
+        </div><br>
+
+        <form id="form-datos" name="formulario" action="conexion.php" method="post">
+
+            <div class="form-group row">
+                <label class="col-2 col-form-label">Nombres:</label>
+                <div class="col-7">
+                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese sus Nombres">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-2 col-form-label">Apellidos:</label>
+                <div class="col-7">
+                    <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Ingrese sus Apellidos" >
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-2 col-form-label">Fecha de Nacimiento:</label>
+                <div class="col-7">
+                    <input class="form-control" type="date" placeholder="xxxx-xx-xx" id="date" name="date">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-2 col-form-label">Nacionalidad:</label>
+                <div class="col-6">
+                    <input type="text" class="form-control" id="nacionalidad" placeholder="Nacionalidad" name="nacionalidad" >
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-2 col-form-label">Cedula:</label>
+                <div class="col-6">
+                    <input class="form-control" type="number" id="cedula" name="cedula" >
+                </div>
+            </div>
+
+            <div class="form-group row">
+
+                <label class="col-2 col-form-label">Estado Civil</label>
+                <div class="col-6">
+                    <select class="form-control" id="estado" name="estado" >
+                        <option>Solter@</option>
+                        <option>Casad@</option>
+                        <option>Divorciad@</option>
+                        <option>Viud@</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="form-group row">
+                <label class="col-2 col-form-label">Dirección:</label>
+                <div class="col-6">
+                    <input type="text" class="form-control" id="exampleInputAdrees" placeholder="Ingrese su Direccion" name="direccion" >
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-2 col-form-label">Teléfono:</label>
+                <div class="col-6">
+                    <input class="form-control" type="tel" placeholder="1-(555)-555-5555" id="telefono" name="telefono" >
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-2 col-form-label">Email: </label>
+                <div class="col-6">
+                    <input type="email" class="form-control" id="email" placeholder="Ingrese su Email" name="email" >
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Observaciones:</label>
+                <div class="col-6">
+                    <textarea class="form-control" id="area" name="area" rows="4" ></textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputFile">Seleccione un archivo</label>
+                <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp" name="exampleInputFile">
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="enviar" name="enviar">Registrarse</button>
+            <button type="reset" class="btn btn-primary" name="enviar">Reestablecer</button>
+
+        </form><br><br><br><br>
+
+
+    </div>
+
+</body>
+</html>
