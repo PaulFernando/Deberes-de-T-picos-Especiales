@@ -117,7 +117,7 @@
         <h2>DATOS PERSONALES:</h2>
     </div><br>
 
-    <form id="form-datos">
+    <form id="form-datos" name="formulario" action="bdd/base.php" method="post">
 
         <div class="form-group row">
             <label class="col-2 col-form-label">Nombres:</label>
@@ -136,7 +136,7 @@
         <div class="form-group row">
             <label class="col-2 col-form-label">Fecha de Nacimiento:</label>
             <div class="col-7">
-                <input class="form-control" type="date" placeholder="xxxx-xx-xx" id="date">
+                <input class="form-control" type="date" placeholder="xxxx-xx-xx" id="date" name="date">
             </div>
         </div>
 
@@ -158,7 +158,7 @@
 
             <label class="col-2 col-form-label">Estado Civil</label>
             <div class="col-6">
-                <select class="form-control" id="estado" >
+                <select class="form-control" id="estado" name="estado" >
                     <option>Solter@</option>
                     <option>Casad@</option>
                     <option>Divorciad@</option>
@@ -178,7 +178,7 @@
         <div class="form-group row">
             <label class="col-2 col-form-label">Teléfono:</label>
             <div class="col-6">
-                <input class="form-control" type="tel" placeholder="1-(555)-555-5555" id="tel" name="telefono" >
+                <input class="form-control" type="tel" placeholder="1-(555)-555-5555" id="telefono" name="telefono" >
             </div>
         </div>
 
@@ -192,17 +192,19 @@
         <div class="form-group">
             <label>Observaciones:</label>
             <div class="col-6">
-            <textarea class="form-control" id="area" rows="4" ></textarea>
+            <textarea class="form-control" id="area" name="area" rows="4" ></textarea>
             </div>
         </div>
 
         <div class="form-group">
             <label for="exampleInputFile">Seleccione un archivo</label>
-            <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+            <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp" name="exampleInputFile">
         </div>
 
-        <button type="submit" class="btn btn-primary" id="comprobar">Guardar</button>
-    </form>
+        <button type="submit" class="btn btn-primary" id="enviar" name="enviar">Registrarse</button>
+        <button type="reset" class="btn btn-primary" name="enviar">Reestablecer</button>
+
+    </form><br><br><br><br>
 
 </div>
 
