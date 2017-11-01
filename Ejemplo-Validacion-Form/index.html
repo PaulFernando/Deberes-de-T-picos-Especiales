@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hoja de Vida</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- <link rel="stylesheet" href="https://jqueryvalidation.org/files/demo/site-demos.css"> -->
+
+    <!-- JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/validaciones.js"></script>
+
+</head>
+<body>
+<div class="container"><br>
+
+    <div align="center">
+        <img src="img/curriculum.png">
+    </div><br><br>
+
+    <div class="text-primary">
+        <h2>DATOS PERSONALES:</h2>
+    </div><br>
+
+    <form action="" method="post" name="myForm" onsubmit="return (validar())">
+
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Nombres:</label>
+            <div class="col-7">
+            <input type="text" class="form-control" name="nombre">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Apellidos:</label>
+            <div class="col-7">
+                <input type="text" class="form-control" name="apellido" >
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Fecha de Nacimiento:</label>
+            <div class="col-7">
+                <input class="form-control" type="text" name="date">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Nacionalidad:</label>
+            <div class="col-6">
+                <input type="text" class="form-control" name="nacionalidad" >
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Cedula:</label>
+            <div class="col-6">
+                <input class="form-control" type="text" name="cedula" >
+            </div>
+        </div>
+
+        <div class="form-group row">
+
+            <label class="col-2 col-form-label">Estado Civil</label>
+            <div class="col-6">
+                <select class="form-control" name="estado">
+                    <option value="-1">Escojer:</option>
+                    <option value="1">Solter@</option>
+                    <option value="2">Casad@</option>
+                    <option value="3">Divorciad@</option>
+                    <option value="4">Viud@</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Dirección:</label>
+            <div class="col-6">
+                <input type="text" class="form-control" name="direccion" >
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Teléfono:</label>
+            <div class="col-6">
+                <input class="form-control" type="text" name="telefono" >
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Email: </label>
+            <div class="col-6">
+            <input type="text" class="form-control" name="email" >
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Observaciones:</label>
+            <div class="col-6">
+            <textarea class="form-control" name="area" rows="4" ></textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Seleccione un archivo</label>
+            <input type="file" class="form-control-file" aria-describedby="fileHelp" name="exampleInputFile">
+        </div>
+
+        <button type="submit" class="btn btn-primary" name="enviar">Registrarse</button>
+        <button type="reset" class="btn btn-primary" name="enviar">Reestablecer</button>
+
+    </form><br><br><br><br>
+
+</div>
+
+</body>
+</html>
