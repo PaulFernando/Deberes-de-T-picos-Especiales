@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form-Html-Css</title>
+    <link rel="stylesheet" href="estilo/style.css">
+    <script type="text/javascript" src="js/validar.js"></script>
+</head>
+<body>
+
+<form action="datos.php" class="form-style-9" method="post" name="myForm" onsubmit="return (validar())">
+    <ul>
+        <li>
+            <input type="text" name="nombre" class="field-style field-split align-left" placeholder="Nombre" />
+            <input type="text" name="apellido" class="field-style field-split align-right" placeholder="Apellido" />
+
+        </li>
+        <li>
+            <input type="text" name="telefono" class="field-style field-split align-left" placeholder="Telefono" />
+            <input type="text" name="direccion" class="field-style field-split align-right" placeholder="Direccion" />
+        </li>
+        <li>
+            <input type="text" name="email" class="field-style field-full align-none" placeholder="Email" />
+        </li>
+        <li>
+            <textarea name="mensaje" class="field-style" placeholder="Message"></textarea>
+        </li>
+        <li>
+            <input type="submit" value="Enviar" />
+            <input type="reset" value="Limpiar" />
+        </li>
+    </ul>
+</form>
+
+</body>
+</html>
+
